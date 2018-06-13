@@ -32,9 +32,9 @@ public class CountingSort {
             C[A[j]] = C[A[j]] - 1;
         }
 
-        System.out.println("A-array: " + Arrays.toString(A));
-        System.out.println("C-array: " + Arrays.toString(C));
-        System.out.println("B-array: " + Arrays.toString(B));
+        System.out.println("A-array (input): " + Arrays.toString(A));
+        System.out.println("C-array (counting array): " + Arrays.toString(C));
+        System.out.println("B-array (output): " + Arrays.toString(B));
         this.isSorted = true;
     }
 
