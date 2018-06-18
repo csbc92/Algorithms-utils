@@ -6,9 +6,15 @@ package dk.sdu.mmmi.algo.utils.datastructures;
 public class Element {
     public int key;
     public Object data;
+    public Element parent;
 
     public Element(int key, Object data) {
         this.key = key;
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return this.data.toString();
     }
 }

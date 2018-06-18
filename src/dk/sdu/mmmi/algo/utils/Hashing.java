@@ -70,13 +70,13 @@ public class Hashing {
             } else {
                 i++;
             }
-        } while (i != m);
+        } while (i < m);
 
         return null;
     }
 
     private static int hashFunction1(int key) {
-        return (key + 2) % 7; // This method can be update to match h'(x) given in the task..
+        return (7*key+4) % 11; // This method can be update to match h'(x) given in the task..
     }
 
     private static int hashFunction2(int key) {
@@ -113,12 +113,12 @@ public class Hashing {
     public static void main(String[] args) {
         // OBS: Remember to update both hashFunction1() and hashFunction2() to those given in the task..
         // OBS: Remember to update the key to be inserted and the table before running the program..
-        Integer[] hashTable = new Integer[] {89, null, null, null, 23, 45, 11};
-        int key = 73;
+        Integer[] hashTable = new Integer[] {67, 20, 17, null, 33, null, 16, 2, null, null, 15};
 
-        runLinearProbeHashing(hashTable, key);
+        runLinearProbeHashing(hashTable, 18);
+        runLinearProbeHashing(hashTable, 26);
         //runDoubleHashing(hashTable, key);
         //runDoubleHashingExampleFromBook();
-        //runQuadraticHashing(hashTable, key, 5, 1); // OBS: Remember to change the constants if they are given by the task..
+        //runQuadraticHashing(hashTable, 22, 3, 1); // OBS: Remember to change the constants if they are given by the task..
     }
 }

@@ -1,11 +1,11 @@
 package dk.sdu.mmmi.algo.utils;
 
 import dk.sdu.mmmi.algo.utils.datastructures.Element;
-import dk.sdu.mmmi.algo.utils.datastructures.PQHeap;
+import dk.sdu.mmmi.algo.utils.datastructures.MinPQHeap;
 
 public class HeapTest {
     public static void main(String[] args) {
-        PQHeap heap = new PQHeap(9);
+        MinPQHeap heap = new MinPQHeap(9);
 
         heap.insert(new Element(2, null));
         heap.insert(new Element(2, null));
