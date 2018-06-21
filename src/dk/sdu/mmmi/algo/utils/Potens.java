@@ -12,10 +12,10 @@ public class Potens {
 //
 //        System.out.println("Udtrykket er sandt..");
 
-//        for (int i = 1; i < 100; i++) {
-//            System.out.print(i + " ");
-//            System.out.println(algoritme4(i));
-//        }
+        for (int i = 1; i < 100; i++) {
+            System.out.print(i + " ");
+            System.out.println(algoritme1(i));
+        }
 
     }
 
@@ -61,25 +61,34 @@ public class Potens {
     public static int algoritme1(int n) {
         int time = 0;
 
-        for (int i = 1; i < n; i++) {
-            int j = i;
-            while (j > 0) {
-                j = j - 1;
-                time++;
+        int s = 0;
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j <= n; j++) {
+                for (int k = i; k <= j; k++) {
+                    s = s + 1;
+                    time++;
+                }
             }
+
         }
 
         return time;
     }
 
     public static int algoritme2(int n) {
-        int i = 1;
         int time = 0;
+        int s = 0;
 
-        while (i < n) {
-            i = i*2;
-            time++;
+        while (n > 1) {
+            for (int i = 1; i <= n; i++) {
+                s = s +1;
+                time++;
+            }
+
+            n = (int)(n/2);
         }
+
 
         return time;
     }
